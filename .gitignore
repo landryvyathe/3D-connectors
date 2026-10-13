@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+
+# Blender
+*.blend1
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
