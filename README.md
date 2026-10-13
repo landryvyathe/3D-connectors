@@ -100,6 +100,13 @@ Add them under `"env"` in the server entry, e.g.
 The connector runs `primitive_cube_add`, assigns a Principled BSDF with a blue
 base color, and renders via Cycles — all through the tools above.
 
+![Rendered cube preview](docs/example-cube.png)
+
+It works with real assets too — here a Lamborghini model imported from
+BlenderKit and rendered headless:
+
+![Lamborghini preview](docs/example-lamborghini.png)
+
 ## Testing
 
 With Blender running and its MCP server started:
