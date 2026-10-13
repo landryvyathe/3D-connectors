@@ -19,7 +19,26 @@ CodeBuddy ──MCP (stdio)──▶ blender-connector ──JSON/TCP :9876─�
    - **GUI:** 3D viewport → `N` panel → *MCP* → **Connect**
    - **Headless:** `blender --background file.blend --command blender_mcp`
 
-## Install & register in CodeBuddy
+## Install — one command, no coding
+
+You never write Python and never edit JSON. The connector runs Python inside
+Blender behind the scenes — **you just talk to CodeBuddy in plain language**
+("create a cube, make it blue, render a preview").
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/landryvyathe/3D-Connectors/main/install.sh | bash
+```
+
+The installer:
+1. checks the runner is available,
+2. registers the MCP server in `~/.codebuddy/mcp.json` (backup first, idempotent),
+3. tells you the two clicks needed inside Blender (install the official MCP
+   add-on, press Connect).
+
+Then **reload CodeBuddy** and start asking.
+
+<details>
+<summary>Manual setup (if you prefer editing configs yourself)</summary>
 
 Add to `~/.codebuddy/mcp.json` (or the project `.mcp.json`):
 
@@ -58,6 +77,8 @@ Reload the CodeBuddy session — the `mcp__blender__*` tools then appear.
 
 Add them under `"env"` in the server entry, e.g.
 `"env": {"BLENDER_MCP_PORT": "9877"}` for a second headless instance.
+
+</details>
 
 ## Tools
 
