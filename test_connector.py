@@ -4,7 +4,7 @@ import json
 import subprocess
 import sys
 
-PROC_DIR = "/home/bykiva/DevKiva_all_in/3D-Connectors/blender-connector"
+PROC_DIR = "/home/bykiva/DevKiva_all_in/3D-Connectors"
 
 
 def main() -> int:
